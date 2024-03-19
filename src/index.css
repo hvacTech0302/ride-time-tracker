@@ -1,0 +1,8 @@
+html,
+body,
+.root {
+  margin: 0 !important;
+  font-family: "Irish Grover", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}

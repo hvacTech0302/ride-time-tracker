@@ -72,7 +72,7 @@ const App = () => {
         {/* If invalid URL, route to NotFound */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };

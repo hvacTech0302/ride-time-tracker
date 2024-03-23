@@ -8,15 +8,15 @@ const Navbar = () => {
     <nav>
       <div className="container navbar-container">
         <div className="navbar-container-left">
+          <Logo
+            className="site-logo"
+            width={"100rem"}
+            height={"100rem"}
+            image={siteLogo}
+          />
           <Link to="/">
-            <Logo
-              className="site-logo"
-              width={"100rem"}
-              height={"100rem"}
-              image={siteLogo}
-            />
+            <h3 className="site-title">Ride Time Tracker</h3>
           </Link>
-          <h3 className="site-title">Ride Time Tracker</h3>
         </div>
         <div className="navbar-container-right">
           <ul className="nav-links">

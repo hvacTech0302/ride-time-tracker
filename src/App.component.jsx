@@ -32,14 +32,11 @@ const App = () => {
         {/* Disney World Main Page */}
         <Route path="/disney-world" element={<DisneyWorld />} />
         {/* Disney World Parks Pages */}
-        <Route path="/disney-world/magic-kingdom" element={<MagicKingdom />} />
-        <Route path="/disney-world/epcot" element={<Epcot />} />
+        <Route path="/Disney-Magic-Kingdom" element={<MagicKingdom />} />
+        <Route path="/Epcot" element={<Epcot />} />
+        <Route path="/Animal-Kingdom" element={<AnimalKingdom />} />
         <Route
-          path="/disney-world/animal-kingdom"
-          element={<AnimalKingdom />}
-        />
-        <Route
-          path="/disney-world/hollywood-studios"
+          path="/Disney-Hollywood-Studios"
           element={<HollywoodStudios />}
         />
         {/* Disneyland Main Page */}

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Card from "../Card/Card.component";
 
 import "./cardsContainer.styles.css";
@@ -20,7 +19,21 @@ const CardsContainer = ({ parksArray, includeParks }) => {
 
   return (
     <div className="cards-container">
-      {/* pass name, image, and link to each Card with for loop */}
+      {createCards.map((card, index) => {
+        const linkTo = `/${card.name.replaceAll(" ", "-")}`;
+        const imageLink = `../../assets/images/logos/${card.name.replaceAll(
+          " ",
+          "-"
+        )}-${card.id}.png`.toLowerCase();
+        return (
+          <Card
+            key={index}
+            name={card.name}
+            imageLink={imageLink}
+            linkTo={linkTo}
+          />
+        );
+      })}
     </div>
   );
 };

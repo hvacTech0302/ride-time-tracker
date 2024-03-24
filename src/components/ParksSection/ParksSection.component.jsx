@@ -1,9 +1,4 @@
 import CardsContainer from "../CardsContainer/CardsContainer.component";
-
-import magicKingdomImg from "../../assets/images/Logos/Magic-Kingdom-logo.png";
-import epcotImg from "../../assets/images/Logos/EPCOT-Center-logo.png";
-import animalKingdomImg from "../../assets/images/Logos/Animal-Kingdom-logo.webp";
-import hollywoodStudiosImg from "../../assets/images/Logos/Disneys-Hollywood-Studios-logo.png";
 import "./parksSection.styles.css";
 
 const ParksSection = ({

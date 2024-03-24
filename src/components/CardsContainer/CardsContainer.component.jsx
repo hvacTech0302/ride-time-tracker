@@ -8,13 +8,15 @@ const CardsContainer = ({ parksArray, includeParks }) => {
 
   const cardCreator = (numOfCards) => {
     parksArray.forEach((park) => {
-      console.log(park);
+      if (includeParks.includes(park.id)) {
+        includedParks.push(park);
+      }
     });
 
     return includedParks;
   };
 
-  cardCreator(includeParks.length);
+  const createCards = cardCreator(includeParks.length);
 
   return (
     <div className="cards-container">

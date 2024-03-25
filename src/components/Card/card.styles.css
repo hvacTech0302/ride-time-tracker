@@ -26,8 +26,8 @@
   align-self: center;
   grid-area: Card-Image;
   object-fit: contain;
-  width: 100%;
-  height: 100%;
+  width: 15.6rem;
+  height: 15.6rem;
   border-radius: 50%;
   padding: 14%;
   overflow: visible;

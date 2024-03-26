@@ -12,7 +12,7 @@ const ParksSection = ({
     let filteredArray = [];
     const attractionSelectors = [2, 12]; // Disney === 2 && Universal === 12 ( API constants )
 
-    if (disneyPark) {
+    if (disneyPark && includeParks) {
       parksData.forEach((park) => {
         if (park.id === attractionSelectors[0]) {
           filteredArray.push(park);
@@ -21,7 +21,7 @@ const ParksSection = ({
       });
     }
 
-    if (universalPark) {
+    if (universalPark && includeParks) {
       parksData.forEach((park) => {
         if (park.id === attractionSelectors[1]) {
           filteredArray.push(park);
@@ -38,7 +38,7 @@ const ParksSection = ({
     <section className="container parks-section-container">
       <div className="parks-section-heading">
         <h2>{attractionName}</h2>
-        <h4>Please Choose A Park Below To View Live Ride & Attraction Times</h4>
+        <h4>Please Choose A Park Below</h4>
       </div>
 
       <div className="parks-cards-container">

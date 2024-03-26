@@ -43,6 +43,8 @@
 
 .nav-links li {
   align-self: center;
+  color: whitesmoke;
+  letter-spacing: 0.1rem;
 }
 
 .nav-links li a {

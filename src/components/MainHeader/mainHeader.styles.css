@@ -14,24 +14,3 @@
   height: 100%;
   z-index: inherit;
 }
-
-.main-heading-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 20rem;
-  height: 15rem;
-  position: absolute;
-  top: 25%;
-  left: 57%;
-  padding: 2rem 0 2rem 0;
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: 15px;
-  text-align: center;
-  font-size: 32px;
-}
-
-.main-heading {
-  align-self: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}

@@ -20,14 +20,6 @@ body,
   font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a {
-  color: #d0d0d0;
+a:visited {
+  color: inherit;
 }

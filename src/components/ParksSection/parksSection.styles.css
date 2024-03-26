@@ -1,42 +1,37 @@
 .parks-section-container {
   background: url("../../assets/images/sectionImg.jpg");
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 105px 1fr 3fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  grid-template-areas:
-    ". Navbar ."
-    ". Heading ."
-    ". Cards-Container .";
+  width: 100%;
+  margin-top: 6.5rem;
 }
 
 .parks-section-heading {
-  grid-area: Heading;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  justify-content: space-around;
 
-.parks-cards-container {
-  width: 100%;
-  grid-area: Cards-Container;
-  display: grid;
-  grid-template-rows: 1fr;
+  border-radius: 20px;
+  width: 80%;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* Color & Background */
+  background-color: rgba(29, 150, 215, 1);
+  background-image: url("../../assets/images/background-main-stars.avif");
+  background-position: 0% 0%;
+  background-repeat: repeat-x;
 }
 
 .parks-section-heading h2,
 h4 {
-  color: dimgray;
   text-align: center;
   justify-self: center;
-}
-
-.parks-section-heading h4 {
-  max-width: 275px;
-  padding-top: 0.8rem;
+  max-width: 350px;
+  color: whitesmoke;
+  letter-spacing: 0.15rem;
 }

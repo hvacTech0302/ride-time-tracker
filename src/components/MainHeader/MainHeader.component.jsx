@@ -5,9 +5,6 @@ const MainHeader = () => {
   return (
     <section className="container main-header-container">
       <video src={MainHeaderVideo} muted autoPlay loop></video>
-      <div className="main-heading-container">
-        <h1 className="main-heading">Select a Location to get started!</h1>
-      </div>
     </section>
   );
 };

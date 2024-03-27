@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home.page";
 import DisneyWorld from "./pages/DisneyWorld/DisneyWorld.page";
 import Disneyland from "./pages/Disneyland/Disneyland.page";
 import UniversalOrlando from "./pages/UniversalStudiosOrlando/UniversalOrlando.page";
-import UniversalHollywood from "./pages/UniversalStudiosHollywood/UniversalHollywood.page";
+import UniversalHollywoodPark from "./pages/UniversalStudiosHollywood/UniversalHollywood.page";
 import NotFound from "./pages/NotFound/NotFound.page";
 // Sub-Pages
 import MagicKingdom from "./pages/DisneyWorld/MagicKingdom/MagicKingdom.page";
@@ -32,39 +32,36 @@ const App = () => {
         {/* Disney World Main Page */}
         <Route path="/disney-world" element={<DisneyWorld />} />
         {/* Disney World Parks Pages */}
-        <Route path="/Disney-Magic-Kingdom" element={<MagicKingdom />} />
-        <Route path="/Epcot" element={<Epcot />} />
-        <Route path="/Animal-Kingdom" element={<AnimalKingdom />} />
+        <Route path="/Disney-Magic-Kingdom-park" element={<MagicKingdom />} />
+        <Route path="/Epcot-park" element={<Epcot />} />
+        <Route path="/Animal-Kingdom-park" element={<AnimalKingdom />} />
         <Route
-          path="/Disney-Hollywood-Studios"
+          path="/Disney-Hollywood-Studios-park"
           element={<HollywoodStudios />}
         />
         {/* Disneyland Main Page */}
         <Route path="/disneyland" element={<Disneyland />} />
         {/* Disneyland Parks Pages */}
+        <Route path="/disneyland-park" element={<DisneylandPark />} />
         <Route
-          path="/disneyland/disneyland-park"
-          element={<DisneylandPark />}
-        />
-        <Route
-          path="/disneyland/california-adventure"
+          path="/disney-california-adventure-park"
           element={<CaliforniaAdventure />}
         />
         {/* Universal Orlando Main Page */}
         <Route path="/universal-orlando" element={<UniversalOrlando />} />
         {/* Universal Orlando Parks Pages */}
         <Route
-          path="universal-orlando/universal-orlando-park"
+          path="/Universal-Studios-At-Universal-Orlando-park"
           element={<UniversalOrlandoPark />}
         />
         <Route
-          path="universal-orlando/islands-of-adventure-park"
+          path="/Islands-Of-Adventure-At-Universal-Orlando-park"
           element={<IslandsOfAdventure />}
         />
         {/* Universal Hollywood Main & Park Page (Single Park) */}
         <Route
           path="/universal-hollywood-park"
-          element={<UniversalHollywood />}
+          element={<UniversalHollywoodPark />}
         />
         {/* If invalid URL, route to NotFound */}
         <Route path="*" element={<NotFound />} />

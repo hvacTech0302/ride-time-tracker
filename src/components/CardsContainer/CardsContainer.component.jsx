@@ -23,7 +23,7 @@ const CardsContainer = ({ parksArray, includeParks }) => {
     <div className="cards-container">
       {createCards ? (
         createCards.map((card, index) => {
-          const linkTo = `/${card.name.replaceAll(" ", "-")}`;
+          const linkTo = `/${card.name.replaceAll(" ", "-")}-park`;
           const imageLink = `../../assets/images/logos/${card.name.replaceAll(
             " ",
             "-"

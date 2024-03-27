@@ -6,6 +6,7 @@
   top: 0;
   width: 100%;
   z-index: 1030;
+  border-radius: 0 0 5px 5px;
 }
 
 .navbar-container-left {

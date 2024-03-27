@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import { useState, useEffect } from "react";
 import disneyWorldImage from "../../assets/images/Hero/Disney World/Disney-World-Hero.jpg";
 import Header from "./../../components/Header/Header.component";
@@ -21,7 +19,7 @@ const DisneyWorld = () => {
     const data = require("../../assets/data/parksData.json");
 
     setParksData(data);
-  });
+  }, []);
 
   return (
     <>

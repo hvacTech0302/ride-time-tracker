@@ -68,6 +68,34 @@
   margin: 20px auto;
 }
 
+.table {
+  min-height: 120px;
+}
+
+.ride-info:nth-child(2) .ride-name {
+  border-radius: 20px 0 0 0;
+}
+
+.ride-info:nth-child(2) .last-updated {
+  border-radius: 0 20px 0 0;
+}
+
+tbody:last-child td:first-child {
+  border-radius: 0 0 0 20px;
+}
+
+tbody:last-child td:last-child {
+  border-radius: 0 0 20px 0;
+}
+
+.single-row-table .ride-name {
+  border-radius: 20px 0 0 20px !important;
+}
+
+.single-row-table .last-updated {
+  border-radius: 0 20px 20px 0 !important;
+}
+
 .table th {
   background: rgba(29, 150, 215, 1);
   color: whitesmoke;
@@ -81,12 +109,9 @@
 }
 
 .ride-name {
-  text-align: left;
-}
-
-.ride-name {
-  text-align: left;
   width: 25%;
+  text-align: left;
+  padding: 0.8rem;
 }
 
 .ride-open,
@@ -95,9 +120,29 @@
   text-align: center;
 }
 
+.ride-closed {
+  background-color: rgb(207, 70, 70) !important;
+}
+
+.ride-open {
+  background-color: rgb(53, 198, 53) !important;
+}
+
 .wait-time {
   width: 10%;
   text-align: center;
+}
+
+.wait-time-low {
+  color: green !important;
+}
+
+.wait-time-med {
+  color: yellow !important;
+}
+
+.wait-time-high {
+  color: red !important;
 }
 
 .last-updated {

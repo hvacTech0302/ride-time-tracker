@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo.component.jsx";
-import siteLogo from "../../assets/images/logos/site-logo.png";
 import "./navbar.styles.css";
 
 const Navbar = () => {
+  const siteLogo = require("../../assets/images/logos/site-logo.png");
   return (
     <nav>
       <div className="container navbar-container">

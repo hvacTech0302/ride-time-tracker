@@ -3,17 +3,11 @@ import Logo from "../Logo/Logo.component.jsx";
 import "./navbar.styles.css";
 
 const Navbar = () => {
-  const siteLogo = require("./../../assets/images/logos/site-logo.png");
   return (
     <nav>
       <div className="container navbar-container">
         <div className="navbar-container-left">
-          <Logo
-            className="site-logo"
-            width={"100rem"}
-            height={"100rem"}
-            image={siteLogo}
-          />
+          <Logo className="site-logo" width={"100rem"} height={"100rem"} />
           <Link to="/">
             <h3 className="site-title">Ride Time Tracker</h3>
           </Link>

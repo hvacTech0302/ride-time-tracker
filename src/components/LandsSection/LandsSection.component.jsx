@@ -9,8 +9,12 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
   let [rides, setRides] = useState([]);
 
   useEffect(() => {
+    const url =
+      "https://corsproxy.io/?" +
+      encodeURIComponent("https://queue-times.com/parks.json");
+
     axios
-      .get("https://queue-times.com/parks.json")
+      .get(url)
       .then((res) => res.data)
       .then((data) => {
         data.forEach((attraction) => {
@@ -34,8 +38,13 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
   }, [disneyPark, parkId, universalPark]);
 
   useEffect(() => {
+    const url =
+      "https://corsproxy.io/?" +
+      encodeURIComponent(
+        `https://queue-times.com/parks/${parkId}/queue_times.json`
+      );
     axios
-      .get(`https://queue-times.com/parks/${parkId}/queue_times.json`)
+      .get(url)
       .then((res) => res.data)
       .then((data) => {
         setLands(data.lands);
@@ -43,8 +52,14 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
   }, [parkId]);
 
   useEffect(() => {
+    const url =
+      "https://corsproxy.io/?" +
+      encodeURIComponent(
+        `https://queue-times.com/parks/${parkId}/queue_times.json`
+      );
+
     axios
-      .get(`https://queue-times.com/parks/${parkId}/queue_times.json`)
+      .get(url)
       .then((res) => res.data)
       .then((data) => {
         setRides(data.rides);

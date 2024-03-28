@@ -13,8 +13,13 @@ const UniversalHollywoodPark = () => {
   const [lands, setLands] = useState([]);
 
   useEffect(() => {
+    const url =
+      "https://corsproxy.io/?" +
+      encodeURIComponent(
+        `https://queue-times.com/parks/${parkId}/queue_times.json`
+      );
     axios
-      .get(`https://queue-times.com/parks/${parkId}/queue_times.json`)
+      .get(url)
       .then((res) => res.data)
       .then((data) => {
         return setLands(data.rides);

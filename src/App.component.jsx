@@ -18,7 +18,6 @@ import UniversalOrlandoPark from "./pages/UniversalStudiosOrlando/UniversalOrlan
 import IslandsOfAdventure from "./pages/UniversalStudiosOrlando/IslandsOfAdventure/IslandsOfAdventure.page";
 // Components
 import Navbar from "./components/Navbar/Navbar.component";
-import Footer from "./components/Footer/Footer.component";
 // Stylesheets
 import "./app.styles.css";
 

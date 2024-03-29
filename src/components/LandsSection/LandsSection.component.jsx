@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import moment from "moment";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { LowestLevel } from "../../assets/images/vectors/lowest-level.svg";
 import "./landsSection.styles.css";
 
 const LandsSection = ({ parkId, disneyPark, universalPark }) => {

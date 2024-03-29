@@ -21,7 +21,7 @@ const UniversalOrlando = () => {
     const data = require("../../assets/data/parksData.json");
 
     setParksData(data);
-  });
+  }, []);
 
   return (
     <>

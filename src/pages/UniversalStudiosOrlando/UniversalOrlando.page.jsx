@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import { useState, useEffect } from "react";
 import universalOrlandoImage from "../../assets/images/Hero/Universal Florida/Universal-Studios-Hero.jpg";
 import Header from "./../../components/Header/Header.component";

@@ -179,7 +179,8 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
                             ? `${Math.floor(
                                 duration.as("seconds")
                               ).toString()} Seconds Ago`
-                            : Math.floor(duration.as("seconds")) > 60 < 119
+                            : Math.floor(duration.as("seconds")) > 60 &&
+                              Math.floor(duration.as("seconds")) < 119
                             ? `${Math.floor(
                                 duration.as("minutes")
                               ).toString()} Minute Ago`
@@ -296,7 +297,8 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
                         ? `${Math.floor(
                             duration.as("seconds")
                           ).toString()} Seconds Ago`
-                        : Math.floor(duration.as("seconds")) > 60 < 119
+                        : Math.floor(duration.as("seconds")) > 60 &&
+                          Math.floor(duration.as("seconds")) < 119
                         ? `${Math.floor(
                             duration.as("minutes")
                           ).toString()} Minute Ago`

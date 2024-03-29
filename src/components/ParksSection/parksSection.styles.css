@@ -1,5 +1,6 @@
 .parks-section-container {
   background: url("../../assets/images/sectionImg.jpg");
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;

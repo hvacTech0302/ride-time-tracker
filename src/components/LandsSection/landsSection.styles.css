@@ -1,5 +1,6 @@
 .lands-section-container {
   background: url("../../assets/images/sectionImg.jpg");
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +104,7 @@ tbody:last-child td:last-child {
 }
 
 .table td {
-  background: rgb(159, 191, 209);
+  background: rgba(28, 70, 142, 1);
   color: whitesmoke;
   letter-spacing: 0.1rem;
 }
@@ -121,31 +122,43 @@ tbody:last-child td:last-child {
 }
 
 .ride-closed {
-  background-color: rgb(207, 70, 70) !important;
+  color: rgb(207, 70, 70) !important;
+  font-size: 1.6rem;
 }
 
 .ride-open {
-  background-color: rgb(53, 198, 53) !important;
+  color: rgb(53, 198, 53) !important;
+  font-size: 1.6rem;
 }
 
 .wait-time {
   width: 10%;
   text-align: center;
+  font-size: 1.6rem;
+}
+
+.wait-time > h3 {
+  font-size: 0.9rem;
+}
+
+.wait-time-closed {
+  color: rgb(207, 70, 70) !important;
 }
 
 .wait-time-low {
-  color: green !important;
+  color: rgb(53, 198, 53) !important;
 }
 
 .wait-time-med {
-  color: yellow !important;
+  color: rgb(237, 237, 19) !important;
 }
 
 .wait-time-high {
-  color: red !important;
+  color: rgb(207, 70, 70) !important;
 }
 
 .last-updated {
   width: 10%;
   text-align: center;
+  font-size: 0.9rem;
 }

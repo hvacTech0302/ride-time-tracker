@@ -1,50 +1,116 @@
-import { Link, NavLink } from "react-router-dom";
-import Logo from "../Logo/Logo.component.jsx";
-import siteLogo from "../../assets/images/logos/site-logo.png";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import { FaCaretDown } from "react-icons/fa";
+
+import Dropdown from "../Dropdown/Dropdown.component";
+
+import {
+  disneyWorldMenuItems,
+  disneylandMenuItems,
+  universalOrlandoMenuItems,
+} from "../../assets/data/MenuItems";
+
 import "./navbar.styles.css";
 
-const Navbar = () => {
+function Navbar() {
+  const [click, setClick] = useState(false);
+  const [disneyWorldDropdown, setDisneyWorldDropdown] = useState(false);
+  const [disneylandDropdown, setDisneylandDropdown] = useState(false);
+  const [universalOrlandoDropdown, setUniversalOrlandoDropdown] =
+    useState(false);
+
+  const handleClick = () => setClick(!click);
+
+  const closeMobileMenu = () => setClick(false);
+
   return (
-    <nav>
-      <div className="container navbar-container">
-        <div className="navbar-container-left">
-          <Logo
-            className="site-logo"
-            width={"100rem"}
-            height={"100rem"}
-            image={siteLogo}
-          />
-          <Link to="/">
-            <h3 className="site-title">Ride Time Tracker</h3>
-          </Link>
+    <>
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo">
+          Ride Time Tracker
+        </Link>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"}>
+            {click ? <FaTimes /> : <FaBars />}
+          </i>
         </div>
-        <div className="navbar-container-right">
-          <ul className="nav-links">
-            <li>
-              <NavLink className="nav-link" to="/disney-world">
-                Disney World
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="nav-link" to="/disneyland">
-                Disneyland
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="nav-link" to="/universal-orlando">
-                Universal Studios Orlando
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="nav-link" to="/universal-hollywood-park">
-                Universal Studios Hollywood
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li
+            className="nav-item"
+            onMouseEnter={() => {
+              setDisneyWorldDropdown(true);
+            }}
+            onMouseLeave={() => {
+              setDisneyWorldDropdown(false);
+            }}
+          >
+            <Link
+              to="/disney-world"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Disney World{" "}
+              <i className="fas fa-caret-down">
+                <FaCaretDown />
+              </i>
+            </Link>
+            {disneyWorldDropdown && (
+              <Dropdown itemsArray={disneyWorldMenuItems} />
+            )}
+          </li>
+          <li
+            className="nav-item"
+            onMouseEnter={() => setDisneylandDropdown(true)}
+            onMouseLeave={() => setDisneylandDropdown(false)}
+          >
+            <Link
+              to="/disneyland"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Disneyland{" "}
+              <i className="fas fa-caret-down">
+                <FaCaretDown />
+              </i>
+            </Link>
+            {disneylandDropdown && (
+              <Dropdown itemsArray={disneylandMenuItems} />
+            )}
+          </li>
+          <li
+            className="nav-item"
+            onMouseEnter={() => setUniversalOrlandoDropdown(true)}
+            onMouseLeave={() => setUniversalOrlandoDropdown(false)}
+          >
+            <Link
+              to="/universal-orlando"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Universal Studios Orlando{" "}
+              <i className="fas fa-caret-down">
+                <FaCaretDown />
+              </i>
+            </Link>
+            {universalOrlandoDropdown && (
+              <Dropdown itemsArray={universalOrlandoMenuItems} />
+            )}
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/universal-hollywood-park"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Universal Studios Hollywood
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
-};
+}
 
 export default Navbar;

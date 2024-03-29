@@ -1,0 +1,37 @@
+.dropdown-menu {
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  list-style: none;
+  text-align: start;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.dropdown-menu li {
+  background: rgba(28, 70, 142, 0.85);
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #1888ff;
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+.dropdown-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white !important;
+  padding: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .dropdown-menu {
+    display: none;
+  }
+}

@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import moment from "moment";
+import { FaRegTimesCircle } from "react-icons/fa";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { LowestLevel } from "../../assets/images/vectors/lowest-level.svg";
 import "./landsSection.styles.css";
 
 const LandsSection = ({ parkId, disneyPark, universalPark }) => {
@@ -119,12 +122,16 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
                         <td
                           className={ride.is_open ? "ride-open" : "ride-closed"}
                         >
-                          {ride.is_open ? "Open" : "Closed"}
+                          {ride.is_open ? (
+                            <FaRegCheckCircle />
+                          ) : (
+                            <FaRegTimesCircle />
+                          )}
                         </td>
                         <td
                           className={`wait-time ${
                             !ride.is_open
-                              ? "ride-closed"
+                              ? "wait-time-closed"
                               : ride.wait_time <= 30
                               ? "wait-time-low"
                               : ride.wait_time > 30 && ride.wait_time <= 60
@@ -134,9 +141,39 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
                               : null
                           }`}
                         >
-                          {ride.is_open
-                            ? `${ride.wait_time} Minutes`
-                            : "Closed"}
+                          {!ride.is_open ? (
+                            <h3>Attraction Closed</h3>
+                          ) : ride.wait_time <= 30 ? (
+                            <>
+                              <img
+                                src="../../assets/images/vectors/lowest-level.svg"
+                                width={"30px"}
+                                height={"30px"}
+                                alt="ride wait time visual"
+                              />
+                              <h3>{ride.wait_time} Minutes</h3>
+                            </>
+                          ) : ride.wait_time > 30 && ride.wait_time <= 60 ? (
+                            <>
+                              <img
+                                src="../../assets/images/vectors/medium-level.svg"
+                                width={"30px"}
+                                height={"30px"}
+                                alt="ride wait time visual"
+                              />
+                              <h3>{ride.wait_time} Minutes</h3>
+                            </>
+                          ) : ride.wait_time > 60 ? (
+                            <>
+                              <img
+                                src="../../assets/images/vectors/highest-level.svg"
+                                width={"30px"}
+                                height={"30px"}
+                                alt="ride wait time visual"
+                              />
+                              <h3>{ride.wait_time} Minutes</h3>
+                            </>
+                          ) : null}
                         </td>
                         <td className="last-updated">
                           {Math.floor(duration.as("seconds")) <= 59
@@ -202,12 +239,16 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
                   <tr className={"row"}>
                     <td className={"ride-name"}>{ride.name}</td>
                     <td className={ride.is_open ? "ride-open" : "ride-closed"}>
-                      {ride.is_open ? "Open" : "Closed"}
+                      {ride.is_open ? (
+                        <FaRegCheckCircle />
+                      ) : (
+                        <FaRegTimesCircle />
+                      )}
                     </td>
                     <td
                       className={`wait-time ${
                         !ride.is_open
-                          ? "ride-closed"
+                          ? "wait-time-closed"
                           : ride.wait_time <= 30
                           ? "wait-time-low"
                           : ride.wait_time > 30 && ride.wait_time <= 60
@@ -217,7 +258,39 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
                           : null
                       }`}
                     >
-                      {ride.is_open ? `${ride.wait_time} Minutes` : "Closed"}
+                      {!ride.is_open ? (
+                        <h3>Attraction Closed</h3>
+                      ) : ride.wait_time <= 30 ? (
+                        <>
+                          <img
+                            src="../../assets/images/vectors/lowest-level.svg"
+                            width={"30px"}
+                            height={"30px"}
+                            alt="ride wait time visual"
+                          />
+                          <h3>{ride.wait_time} Minutes</h3>
+                        </>
+                      ) : ride.wait_time > 30 && ride.wait_time <= 60 ? (
+                        <>
+                          <img
+                            src="../../assets/images/vectors/medium-level.svg"
+                            width={"30px"}
+                            height={"30px"}
+                            alt="ride wait time visual"
+                          />
+                          <h3>{ride.wait_time} Minutes</h3>
+                        </>
+                      ) : ride.wait_time > 60 ? (
+                        <>
+                          <img
+                            src="../../assets/images/vectors/highest-level.svg"
+                            width={"30px"}
+                            height={"30px"}
+                            alt="ride wait time visual"
+                          />
+                          <h3>{ride.wait_time} Minutes</h3>
+                        </>
+                      ) : null}
                     </td>
                     <td className="last-updated">
                       {Math.floor(duration.as("seconds")) <= 59

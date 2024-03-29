@@ -162,3 +162,37 @@ tbody:last-child td:last-child {
   text-align: center;
   font-size: 0.9rem;
 }
+
+@media screen and (max-width: 600px) {
+  .lands-section-container {
+    display: block;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .lands-section-heading {
+    flex-direction: column;
+    width: 100%;
+    height: 180px;
+    border-radius: 0;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .heading {
+    margin-top: 2.5rem;
+  }
+
+  .refresh-btn {
+    font-size: 1.2rem;
+  }
+
+  .table-wrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .table-headers th {
+    text-align: center;
+  }
+}

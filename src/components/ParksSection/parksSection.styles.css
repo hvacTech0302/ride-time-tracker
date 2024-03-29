@@ -36,3 +36,15 @@ h4 {
   color: whitesmoke;
   letter-spacing: 0.15rem;
 }
+
+@media screen and (max-width: 600px) {
+  .parks-section-container {
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .parks-section-heading {
+    margin: 4rem auto 0;
+  }
+}

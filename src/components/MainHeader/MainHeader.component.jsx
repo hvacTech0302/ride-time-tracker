@@ -12,6 +12,11 @@ const MainHeader = () => {
         autoPlay
         loop
       ></video> */}
+
+      <img
+        src="../../assets/images/Hero/Hagrids-Magical-Creatures-Motorbike-Adventure-TEXTLESS.png"
+        alt="background"
+      />
     </section>
   );
 };

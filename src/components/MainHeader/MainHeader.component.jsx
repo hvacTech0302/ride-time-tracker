@@ -4,7 +4,15 @@ import "./mainHeader.styles.css";
 const MainHeader = () => {
   return (
     <section className="container main-header-container">
-      <video src={MainHeaderVideo} muted autoPlay loop></video>
+      <video
+        src={MainHeaderVideo}
+        type={"video/mp4"}
+        preload={"yes"}
+        playsInline
+        muted
+        autoPlay
+        loop
+      ></video>
     </section>
   );
 };

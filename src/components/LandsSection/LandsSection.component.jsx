@@ -12,7 +12,7 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
 
   useEffect(() => {
     const url =
-      "https://corsproxy.io/?" +
+      "https://corsproxy.io/?key=43c59a26&url=" +
       encodeURIComponent("https://queue-times.com/parks.json");
 
     axios
@@ -41,7 +41,7 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
 
   useEffect(() => {
     const url =
-      "https://corsproxy.io/?" +
+      "https://corsproxy.io/?key=43c59a26&url=" +
       encodeURIComponent(
         `https://queue-times.com/parks/${parkId}/queue_times.json`
       );
@@ -55,7 +55,7 @@ const LandsSection = ({ parkId, disneyPark, universalPark }) => {
 
   useEffect(() => {
     const url =
-      "https://corsproxy.io/?" +
+      "https://corsproxy.io/?key=43c59a26&url=" +
       encodeURIComponent(
         `https://queue-times.com/parks/${parkId}/queue_times.json`
       );
